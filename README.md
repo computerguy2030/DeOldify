@@ -298,7 +298,7 @@ git clone https://github.com/jantic/DeOldify.git DeOldify
 
 Starting the notebook
 ```console
-cd DeOldify && ./quickstart.sh notebook my_super_password
+cd DeOldify && ./quick_start.sh notebook my_super_password
 ```
 
 your notebook will be accessible on port 8888
@@ -311,12 +311,12 @@ git clone https://github.com/jantic/DeOldify.git DeOldify
 
 Starting the image api
 ```console
-cd DeOldify && ./quickstart.sh image_api
+cd DeOldify && ./quick_start.sh image_api
 ```
 
 Starting the video api
 ```console
-cd DeOldify && ./quickstart.sh image_api
+cd DeOldify && ./quick_start.sh image_api
 ```
 your API will be accessible on port 5000
 
@@ -379,6 +379,24 @@ Calling the API for video processing for a local video
 curl -X POST "http://MY_SUPER_API_IP:5000/process" -H "accept: application/octet-stream" -H "Content-Type: video/mpeg" -F "file=@chaplin.mp4"  -F "render_factor=35" --output colorized_video.mp4
 ```
 > **Note:** If you don't have Nvidia Docker, [here](https://github.com/nvidia/nvidia-docker/wiki/Installation-(version-2.0)#installing-version-20) is the installation guide.
+
+### Caching the model to improve API booting time
+The API is made to download the model (if not already present locally) at boot time.
+
+Adding the your model to the local subdirectory of the project "data/models" for instance :
+- "/home/ubutun/deoldify/data/models/ColorizeArtistic_gen.pth" (image model)
+- "/home/ubutun/deoldify/data/models/ColorizeVideo_gen.pth" (video model)
+
+both models are available here:
+- [Image Model](https://data.deepai.org/deoldify/ColorizeArtistic_gen.pth)
+- [Video Model](https://data.deepai.org/deoldify/ColorizeVideo_gen.pth)
+
+for ubuntu you could do :
+```bash
+$ wget -O /home/ubutun/deoldify/data/models/ColorizeArtistic_gen.pth https://data.deepai.org/deoldify/ColorizeArtistic_gen.pth
+$ ## Then build the image
+$ docker build -t api -f Dockerfile-api .
+```
 
 ### Installation Details
 
