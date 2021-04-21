@@ -32,52 +32,55 @@ Official release:
 [https://pytorch.org/get-started/locally/](https://pytorch.org/get-started/locally/)
 
 My Script:
-
-- git clone https://github.com/computerguy2030/pytorch-rocm-amd.git
-- cd pytorch-rocm-amd
-- bash amd\_build\_script.sh
+```
+git clone https://github.com/computerguy2030/pytorch-rocm-amd.git
+cd pytorch-rocm-amd
+bash amd\_build\_script.sh
+```
 
 ### 3. Install vision
 
-- git clone https://github.com/pytorch/vision.git
-- sudo python3 setup.py install
+```
+git clone https://github.com/pytorch/vision.git
+sudo python3 setup.py install
+```
 
 ### 4. Install fast.ai 
 I have created a fork of the fast.ai repo and reverted changes to the required v1.0.51 for DeOldify:
-git clone https://github.com/computerguy2030/fastai1.git
+```git clone https://github.com/computerguy2030/fastai1.git```
 
 Original: <br>
 Clone:
 
-git clone https://github.com/fastai/fastai1.git
+```git clone https://github.com/fastai/fastai1.git```
 
 Checkout the correct version as advised by DeOldify:
 
-git checkout c6bae03a697df565e9d30877069d41a6b813d98a
+```git checkout c6bae03a697df565e9d30877069d41a6b813d98a```
 
 Install:
 
-sudo python3 setup.py install
+```sudo python3 setup.py install```
 
 ### 5. Start DeOldify Fun!!
 
 Clone:
 
-git clone https://github.com/jantic/DeOldify.git
+```git clone https://github.com/jantic/DeOldify.git```
 
 Install prerequisites:
 
-pip3 install jupyterlab tensorboardX
+```pip3 install jupyterlab tensorboardX```
 
 Start Jupyter Lab and that you are using GPU not CPU
 
-- Run rocm-smi to check power draw, temp and other information
-- Use radeontop to check GPU utlization
+- Run ```rocm-smi``` to check power draw, temp and other information
+- Use ```radeontop``` to check GPU utlization
 
 These tools should allow you to monitor your GPU to ensure the your code in the Jupyter Lab is executing on your AMD GPU.
 
 ### 6. Have fun!!!
 
-jupyter lab
+```jupyter lab```
 
 I have found much interesting B+W footage on archive.org and recommend it as a video and image source for your experiments.
