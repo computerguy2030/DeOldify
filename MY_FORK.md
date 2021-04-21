@@ -42,8 +42,11 @@ My Script:
 - git clone https://github.com/pytorch/vision.git
 - sudo python3 setup.py install
 
-### 4. Install fast.ai
+### 4. Install fast.ai 
+I have created a fork of the fast.ai repo and reverted changes to the required v1.0.51 for DeOldify:
+git clone https://github.com/computerguy2030/fastai1.git
 
+Original: <br>
 Clone:
 
 git clone https://github.com/fastai/fastai1.git
