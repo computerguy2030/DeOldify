@@ -2,7 +2,9 @@
 </h1> DeOldify</h1>
 <h2> MY_FORK</h2>
 
-[Instructions for AMD cards](https://github.com/computerguy2030/DeOldify/blob/master/MY_FORK.md)
+[Instructions for AMD cards](ROCm_Instructions.md)
+
+[My added features](My_added_features.md)
 
 <br>
 -------------------------------------------------------------------------------------------
