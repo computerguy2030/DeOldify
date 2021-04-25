@@ -1,4 +1,4 @@
-# MY\_FORK
+# ROCm Instructions
 
 I am forking this repo to give instructions on using DeOldify on AMD hardware via the ROCm platform.
 
